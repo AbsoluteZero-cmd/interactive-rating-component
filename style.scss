@@ -1,0 +1,130 @@
+// variables
+$main-font: 'Overpass', sans-serif;
+$orange: #fb7413;
+$white: #ffffff;
+$light-grey: #959eac;
+$medium-grey: #7c8798;
+$dark-blue: #161c24;
+$very-dark-blue: #121417;
+
+/* Pre settings */
+body {
+    margin: 0;
+    padding: 0;
+    font-style: 15px;
+    font-family: $main-font;
+    line-height: normal;
+
+    background: $very-dark-blue;
+    color: $white;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Feedback */
+.feedback {
+    width: 440px;
+    height: auto;
+
+    background: $dark-blue;
+    border-radius: 30px;
+
+    padding: 40px 30px;
+
+    /* Center */
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.feedback__icon {
+    background: lighten($dark-blue, 5%);
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.feedback__title {
+    font-weight: 700;
+    margin: 35px 0 15px;
+}
+
+.feedback__text {
+    color: $light-grey;
+    line-height: 1.5;
+}
+
+/* Feedback rating */
+.feedback__rating {
+    display: flex;
+    height: 60px;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 30px 0;
+}
+
+.feedback__btn {
+    width: 60px;
+    border-radius: 50%;
+
+    margin: auto 0;
+
+    padding: 20px;
+
+    text-align: center;
+    background: lighten($dark-blue, 5%);
+    color: $light-grey;
+
+    transition: .3s linear background-color, color;
+    &:hover {
+        cursor: pointer;
+        background: $orange;
+        color: $white;
+    }
+
+    &.chosen {
+        background: $light-grey;
+        color: $white;
+    }
+}
+
+/* Submit button */
+.feedback__submit {
+    width: 100%;
+    
+    padding: 15px 0;
+    display: block;
+
+    background: $orange;
+    color: $white;
+
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 30px;
+
+    transition: .3s linear background-color, color;
+    &:hover {
+        background: $white;
+        color: $orange;
+    }
+}
