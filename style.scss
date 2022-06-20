@@ -31,6 +31,16 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
+h1 {
+    font-weight: 700;
+    margin: 35px 0 15px;
+}
+
+p {
+    color: $light-grey;
+    line-height: 1.5;
+}
+
 /* Container */
 .container {
     width: 100%;
@@ -39,7 +49,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Feedback */
-.feedback {
+.section {
     width: 440px;
     height: auto;
 
@@ -51,6 +61,7 @@ h1, h2, h3, h4, h5, h6 {
     /* Center */
     margin: 0 auto;
     position: absolute;
+    z-index: 1000;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -60,16 +71,6 @@ h1, h2, h3, h4, h5, h6 {
     background: lighten($dark-blue, 5%);
     padding: 15px;
     border-radius: 50%;
-}
-
-.feedback__title {
-    font-weight: 700;
-    margin: 35px 0 15px;
-}
-
-.feedback__text {
-    color: $light-grey;
-    line-height: 1.5;
 }
 
 /* Feedback rating */
@@ -128,4 +129,29 @@ h1, h2, h3, h4, h5, h6 {
         background: $white;
         color: $orange;
     }
+}
+
+/* Thank you */
+.thanks {
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 20px;
+}
+
+.thanks__selected {
+    margin-top: 40px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background: lighten($dark-blue, 5%);
+    color: $orange;
+    opacity: 0.8;
+}
+
+.thanks__text {
+    text-align: center;
 }
